@@ -3,7 +3,12 @@ body {
   padding: 0;
 }
 
+h1 {
+  margin: auto;
+}
+
 #background {
+  padding-top: 40px;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -32,11 +37,12 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  transition: all 0.2s linear 0.3s;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  color: fff;
+  color: #07ffff;
 }
 
 /* Add an active class to highlight the current page */
@@ -51,7 +57,22 @@ body {
 }
 
 .section {
-  margin: 60px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.fp-tableCell {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100vw;
+}
+
+p {
+  font-size: 20px;
+}
+
+.content {
+  text-align: center;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
