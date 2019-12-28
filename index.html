@@ -10,25 +10,25 @@
 <body>
   
 <div id="fullpage">
-  <div class="section" id="home">
+  <div class="section">
     <div class="content">
       <h1>Home Page</h1>
       <p>this page will have some pictures about AR and the event.</p>
     </div>
   </div>
-  <div class="section" id="news">
+  <div class="section">
     <div class="content">
       <h1>News Page</h1>
       <p>this page will have the news about the event like the day, place and other news.</p>
     </div>
   </div>
-  <div class="section" id="about">
+  <div class="section">
     <div class="content">
       <h1>About Page</h1>
       <p>this page will have a brief description about the event.</p>
     </div>
   </div>
-  <div class="section" id="contact">
+  <div class="section">
     <div class="content">
       <h1>Contact Page</h1>
       <p>contact page usually have a form to contact along with an email and a phone number to contact.</p>
@@ -36,10 +36,11 @@
   </div>
 </div>
 <nav class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="#news">News</a>
+  <a href="#home" id="logo" class="active">Home</a>
+  <a href="#contact" id="contact">Contact</a>
+  <a href="#about" id="about">About</a>
+  <a href="#news" id="news">News</a>
+  <a href="#home" id="home">Home</a>
   
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -53,8 +54,33 @@
 	
 	var myFullpage = new fullpage('#fullpage', {
 		css3: true,
-		scrollingSpeed: 2000,
+    scrollingSpeed: 2000,
   });
+
+  document.querySelector('#logo').addEventListener('click', function(e){
+		e.preventDefault();
+		fullpage_api.moveTo(1);
+  });
+  
+  document.querySelector('#home').addEventListener('click', function(e){
+		e.preventDefault();
+		fullpage_api.moveTo(1);
+  });
+  
+  document.querySelector('#news').addEventListener('click', function(e){
+		e.preventDefault();
+		fullpage_api.moveTo(2);
+  });
+  
+  document.querySelector('#about').addEventListener('click', function(e){
+		e.preventDefault();
+		fullpage_api.moveTo(3);
+  });
+  
+  document.querySelector('#contact').addEventListener('click', function(e){
+		e.preventDefault();
+		fullpage_api.moveTo(4);
+	});
   
   particlesJS.load('background', 'particles.json', function() {
     console.log('callback - particles.js config loaded');
